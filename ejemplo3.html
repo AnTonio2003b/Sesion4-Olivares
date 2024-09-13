@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar texto y estilo del segundo elemento</title>
+</head>
+<body>
+
+    <h2>Lista de Elementos</h2>
+    <ul>
+        <li>Primer elemento</li>
+        <li>Segundo elemento</li>
+        <li>Tercer elemento</li>
+    </ul>
+
+    <script>
+        // Selecciona todos los elementos <li> dentro del <ul>
+        const items = document.querySelectorAll('ul li');
+
+        // Modifica el texto, color y tipo de letra del segundo elemento (índice 1)
+        if (items.length > 1) {
+            items[1].textContent = 'Texto modificado del segundo elemento';
+            items[1].style.color = 'red'; // Cambia el color de letra a rojo
+            items[1].style.fontFamily = 'Courier'; // Cambia el tipo de letra a Courier
+        }
+    </script>
+
+</body>
+</html>

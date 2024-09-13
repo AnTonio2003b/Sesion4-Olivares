@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear formulario de registro</title>
+</head>
+<body>
+
+    <h2>Formulario de Registro</h2>
+    
+    <div id="registration-form-container"></div> <!-- Contenedor para el formulario de registro -->
+
+    <script>
+        // Selecciona el contenedor donde se añadirá el formulario de registro
+        const registrationFormContainer = document.getElementById('registration-form-container');
+
+        // Crea el elemento <form>
+        const registrationForm = document.createElement('form');
+
+        // Crea el campo para el nombre
+        const inputName = document.createElement('input');
+        inputName.setAttribute('type', 'text');
+        inputName.setAttribute('placeholder', 'Nombre');
+        inputName.setAttribute('name', 'nombre');
+
+        // Crea el campo para el correo electrónico
+        const inputEmail = document.createElement('input');
+        inputEmail.setAttribute('type', 'email');
+        inputEmail.setAttribute('placeholder', 'Correo Electrónico');
+        inputEmail.setAttribute('name', 'email');
+
+        // Crea el campo para la contraseña
+        const inputPassword = document.createElement('input');
+        inputPassword.setAttribute('type', 'password');
+        inputPassword.setAttribute('placeholder', 'Contraseña');
+        inputPassword.setAttribute('name', 'password');
+
+        // Crea el botón de registro (submit)
+        const registerButton = document.createElement('button');
+        registerButton.setAttribute('type', 'submit');
+        registerButton.textContent = 'Registrarse';
+
+        // Añade los campos y el botón al formulario
+        registrationForm.appendChild(inputName);
+        registrationForm.appendChild(document.createElement('br')); // Salto de línea
+        registrationForm.appendChild(inputEmail);
+        registrationForm.appendChild(document.createElement('br')); // Salto de línea
+        registrationForm.appendChild(inputPassword);
+        registrationForm.appendChild(document.createElement('br')); // Salto de línea
+        registrationForm.appendChild(registerButton);
+
+        // Añade el formulario al contenedor del DOM
+        registrationFormContainer.appendChild(registrationForm);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas Dinámica</title>
+    <style>
+        *{
+            background-color:rgb(250, 245, 238);
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lista de Tareas</h1>
+    
+    <!-- Campo de entrada para nuevas tareas -->
+    <input type="text" id="taskInput" placeholder="Escribe una tarea...">
+    <button id="addTaskBtn">Añadir Tarea</button>
+
+    <!-- Lista desordenada para mostrar las tareas -->
+    <ul id="taskList"></ul>
+
+    <script>
+        // Selecciona los elementos del DOM
+        const taskInput = document.getElementById('taskInput');
+        const addTaskBtn = document.getElementById('addTaskBtn');
+        const taskList = document.getElementById('taskList');
+
+        // Función para añadir una nueva tarea
+        addTaskBtn.addEventListener('click', function() {
+            // Obtiene el valor del input
+            const taskText = taskInput.value;
+
+            // Verifica que el campo no esté vacío
+            if (taskText !== '') {
+                // Crea un nuevo elemento <li>
+                const li = document.createElement('li');
+                li.textContent = taskText;
+
+                // Crea el botón de eliminar
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Eliminar';
+
+                // Añade la funcionalidad de eliminar al botón
+                deleteBtn.addEventListener('click', function() {
+                    li.remove();
+                });
+
+                // Añade el botón de eliminar al <li>
+                li.appendChild(deleteBtn);
+
+                // Añade el <li> a la lista de tareas
+                taskList.appendChild(li);
+
+                // Limpia el campo de texto
+                taskInput.value = '';
+            }
+        });
+    </script>
+
+</body>
+</html>

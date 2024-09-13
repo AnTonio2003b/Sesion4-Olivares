@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Selección por CSS</title>
+</head>
+<body>
+    <p class="miClase">Parrafo 1</p>
+    <p class="miClase">Parrafo 2</p>
+    <p class="miClase">Parrafo 3</p>
+
+    <script>
+        // Seleccionar el primer elemento con la clase "miClase"
+        let primerElemento = document.querySelector(".miClase");
+        primerElemento.style.color = "red";
+
+        // Seleccionar todos los elementos con la clase "miClase"
+        let todoElementos = document.querySelectorAll(".miClase");
+        todoElementos.forEach(element => {
+            element.style.border = "2px solid blue";
+            element.style.fontFamily = "Arial";
+            element.style.padding = "4px";
+            element.style.textAlign = "center";
+        });
+
+
+    </script>
+</body>
+</html>

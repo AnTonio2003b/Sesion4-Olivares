@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - selecion por ID</title>
+</head>
+<body>
+    <h1 id="miTitulo">Ejemplo con DOM</h1>
+    <div id="miElemento">
+        Esto es un div con ID miElemento
+    </div>
+
+    <script>
+        let elemento=document.getElementById("miElemento");
+        elemento.style.color="blue";    
+        elemento.style.backgroundColor="red";
+        elemento.style.fontFamily="Arial";
+        elemento.style.textAlign="center";
+
+        let element=document.getElementById("miTitulo");
+        element.style.color="white";
+        element.style.backgroundColor="black";
+        element.style.fontFamily="Consolas";
+        element.style.textAlign="center";
+
+    </script>
+
+
+    
+</body>
+</html>

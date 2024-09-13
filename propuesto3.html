@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar fondo de un div</title>
+    <style>
+        /* Estilos para el div */
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            background-color: lightgray; /* Color inicial del fondo */
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Cambiar Fondo de un div</h2>
+    
+    <!-- Div al que se le cambiará el fondo -->
+    <div id="colorBox">Fondo Original</div>
+
+    <!-- Botón que dispara el cambio de fondo -->
+    <button id="changeColorBtn">Cambiar Color</button>
+
+    <script>
+        // Selecciona el div y el botón por su ID
+        const colorBox = document.getElementById('colorBox');
+        const changeColorBtn = document.getElementById('changeColorBtn');
+
+        // Añade un evento 'click' al botón para cambiar el fondo del div
+        changeColorBtn.addEventListener('click', function() {
+            // Cambia el color de fondo del div
+            colorBox.style.backgroundColor = 'lightblue'; // Color nuevo
+            colorBox.textContent = 'Fondo Modificado'; // Cambia también el texto
+        });
+    </script>
+
+</body>
+</html>
